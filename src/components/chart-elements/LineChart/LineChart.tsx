@@ -72,6 +72,7 @@ const LineChart = React.forwardRef<HTMLDivElement, LineChartProps>((props, ref) 
     enableLegendSlider = false,
     customTooltip,
     rotateLabelX,
+    reverseY,
     ...other
   } = props;
   const CustomTooltip = customTooltip;
@@ -203,6 +204,7 @@ const LineChart = React.forwardRef<HTMLDivElement, LineChartProps>((props, ref) 
               )}
               tickFormatter={valueFormatter}
               allowDecimals={allowDecimals}
+              reversed={reverseY}
             />
             <Tooltip
               wrapperStyle={{ outline: "none" }}
